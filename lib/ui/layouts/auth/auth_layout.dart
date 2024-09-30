@@ -6,7 +6,6 @@ import 'widgets/links_bar.dart';
 
 class AuthLayout extends StatelessWidget {
   final Widget child;
-
   const AuthLayout({super.key, required this.child});
 
   @override
@@ -28,7 +27,6 @@ class AuthLayout extends StatelessWidget {
 
 class _DesktopBody extends StatelessWidget {
   final Widget child;
-
   const _DesktopBody({super.key, required this.child});
 
   @override
@@ -40,7 +38,7 @@ class _DesktopBody extends StatelessWidget {
       child: Row(
         children: [
           // Twitter Background
-          const BackgroundTwitter(),
+          const Expanded(child: BackgroundTwitter()),
           // View Container
           Container(
             width: 600,
@@ -63,7 +61,6 @@ class _DesktopBody extends StatelessWidget {
 
 class _MobileBody extends StatelessWidget {
   final Widget child;
-
   const _MobileBody({super.key, required this.child});
 
   @override
