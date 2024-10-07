@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../cards/white_card.dart';
 import '../labels/custom_labels.dart';
 
-class DashboardView extends StatelessWidget {
-  const DashboardView({super.key});
+class BlankView extends StatelessWidget {
+  const BlankView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +12,9 @@ class DashboardView extends StatelessWidget {
       child: ListView(
         physics: const ClampingScrollPhysics(),
         children: [
-          Text('Dashboard View', style: CustomLabels.h1),
+          Text('Blank', style: CustomLabels.h1),
           const SizedBox(height: 10),
-          const WhiteCard(title: 'Dashboard', child: Text('Hola Mundo'))
+          const WhiteCard(title: 'Blank', child: Text('Blank View'))
         ],
       ),
     );

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'providers/auth_provider.dart';
 import 'router/router.dart';
+import 'providers/auth_provider.dart';
+import 'providers/sidemenu_provider.dart';
 import 'services/local_storage.dart';
 import 'services/navigation_service.dart';
 import 'ui/layouts/auth/auth_layout.dart';
@@ -21,7 +22,10 @@ class AppState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(lazy: false, create: (_) => AuthProvider())],
+      providers: [
+        ChangeNotifierProvider(lazy: false, create: (_) => AuthProvider()), 
+        ChangeNotifierProvider(lazy: false, create: (_) => SideMenuProvider())
+      ],
       child: const MyApp(),
     );
   }
