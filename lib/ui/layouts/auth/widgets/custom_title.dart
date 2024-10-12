@@ -20,12 +20,12 @@ class CustomTitle extends StatelessWidget {
           FittedBox(
             fit: BoxFit.contain,
             child: Text(
-                'Happening Now',
-                style: GoogleFonts.montserratAlternates(
-                  fontSize: 60,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold
-                )
+              'Happening Now',
+              style: GoogleFonts.montserratAlternates(
+                fontSize: 60,
+                color: Colors.white,
+                fontWeight: FontWeight.bold
+              )
             ),
           )
         ]

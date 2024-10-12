@@ -39,8 +39,6 @@ class WhiteCard extends StatelessWidget {
   BoxDecoration buildBoxDecoration() => BoxDecoration(
     color: Colors.white,
     borderRadius: BorderRadius.circular(5),
-    boxShadow: [
-      BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 5)
-    ]
+    boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 5)]
   );
 }

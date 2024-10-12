@@ -27,7 +27,7 @@ class AuthLayout extends StatelessWidget {
 
 class _DesktopBody extends StatelessWidget {
   final Widget child;
-  const _DesktopBody({super.key, required this.child});
+  const _DesktopBody({required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +37,7 @@ class _DesktopBody extends StatelessWidget {
       height: size.height * 0.95,
       child: Row(
         children: [
-          // Twitter Background
           const Expanded(child: BackgroundTwitter()),
-          // View Container
           Container(
             width: 600,
             height: double.infinity,
@@ -61,7 +59,7 @@ class _DesktopBody extends StatelessWidget {
 
 class _MobileBody extends StatelessWidget {
   final Widget child;
-  const _MobileBody({super.key, required this.child});
+  const _MobileBody({required this.child});
 
   @override
   Widget build(BuildContext context) {

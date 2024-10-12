@@ -15,6 +15,7 @@ class MenuItem extends StatefulWidget {
 
 class _MenuItemState extends State<MenuItem> {
   bool isHovered = false;
+
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
@@ -36,10 +37,7 @@ class _MenuItemState extends State<MenuItem> {
                   const SizedBox(width: 10),
                   Text(
                     widget.text, 
-                    style: GoogleFonts.roboto(
-                      fontSize: 16,
-                      color: Colors.white.withOpacity(0.8)
-                    )
+                    style: GoogleFonts.roboto(fontSize: 16, color: Colors.white.withOpacity(0.8))
                   )
                 ],
               ),

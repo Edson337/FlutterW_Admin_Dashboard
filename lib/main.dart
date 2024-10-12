@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'api/CafeApi.dart';
 import 'router/router.dart';
 import 'providers/auth_provider.dart';
 import 'providers/sidemenu_provider.dart';
 import 'services/local_storage.dart';
 import 'services/navigation_service.dart';
+import 'services/notifications_service.dart';
 import 'ui/layouts/auth/auth_layout.dart';
 import 'ui/layouts/dashboard/dashboard_layout.dart';
 import 'ui/layouts/splash/splash_layout.dart';
 
 void main() async {
   await LocalStorage.configurePrefs();
+  CafeApi.configureDio();
   Flurorouter.configureRoutes();
   runApp(const AppState());
 }
@@ -23,7 +26,7 @@ class AppState extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(lazy: false, create: (_) => AuthProvider()), 
+        ChangeNotifierProvider(lazy: false, create: (_) => AuthProvider()),
         ChangeNotifierProvider(lazy: false, create: (_) => SideMenuProvider())
       ],
       child: const MyApp(),
@@ -42,6 +45,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       onGenerateRoute: Flurorouter.router.generator,
       navigatorKey: NavigationService.navigatorKey,
+      scaffoldMessengerKey: NotificationsService.messengerKey,
       builder: (_, child) {
         final authProvider = Provider.of<AuthProvider>(context);
         if (authProvider.authStatus == AuthStatus.checking) return const SplashLayout();
@@ -52,8 +56,8 @@ class MyApp extends StatelessWidget {
         }
       },
       theme: ThemeData.light().copyWith(
-          scrollbarTheme: const ScrollbarThemeData()
-              .copyWith(thumbColor: WidgetStateProperty.all(Colors.white30))),
+        scrollbarTheme: const ScrollbarThemeData().copyWith(thumbColor: WidgetStateProperty.all(Colors.white30))
+      ),
     );
   }
 }
