@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'api/CafeApi.dart';
 import 'router/router.dart';
 import 'providers/auth_provider.dart';
+import 'providers/categories_provider.dart';
 import 'providers/sidemenu_provider.dart';
 import 'services/local_storage.dart';
 import 'services/navigation_service.dart';
@@ -27,7 +28,8 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(lazy: false, create: (_) => AuthProvider()),
-        ChangeNotifierProvider(lazy: false, create: (_) => SideMenuProvider())
+        ChangeNotifierProvider(lazy: false, create: (_) => SideMenuProvider()),
+        ChangeNotifierProvider(create: (_) => CategoriesProvider())
       ],
       child: const MyApp(),
     );
