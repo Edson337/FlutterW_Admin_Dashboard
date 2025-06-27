@@ -13,7 +13,6 @@ class CategoriesProvider extends ChangeNotifier {
       final categoriesResponse = CategoriesResponse.fromMap(response);
       categorias = [...categoriesResponse.categorias];
       notifyListeners();
-      print('Categorias: $categorias');
     } catch (e) {
       throw('Error al cargar las categorias: $e');
     }
@@ -26,7 +25,6 @@ class CategoriesProvider extends ChangeNotifier {
       final newCategory = Category.fromMap(json);
       categorias.add(newCategory);
       notifyListeners();
-      print('Categoria creada: ${newCategory.nombre}');
     } catch (e) {
       throw('Error al crear la categoria: $e');
     }
@@ -44,7 +42,6 @@ class CategoriesProvider extends ChangeNotifier {
         }
       ).toList();
       notifyListeners();
-      print('Categoria actualizada: $name');
     } catch (e) {
       throw('Error al actualizar la categoria: $e');
     }
@@ -54,7 +51,6 @@ class CategoriesProvider extends ChangeNotifier {
     try {
       await CafeApi.httpDelete('/categorias/$id', {});
       categorias.removeWhere((category) => category.id == id);
-      print('Categoria eliminada: $id');
       notifyListeners();
     } catch (e) {
       throw('Error al eliminar la categoria: $e');

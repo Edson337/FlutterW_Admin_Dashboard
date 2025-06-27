@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../api/CafeApi.dart';
 import '../models/http/auth_response.dart';
+import '../models/http/user.dart';
 import '../router/router.dart';
 import '../services/local_storage.dart';
 import '../services/navigation_service.dart';
@@ -11,7 +12,7 @@ enum AuthStatus { checking, authenticated, notAuthenticated }
 
 class AuthProvider extends ChangeNotifier {
   AuthStatus authStatus = AuthStatus.checking;
-  Usuario? user;
+  User? user;
 
   AuthProvider() {
     isAuthenticated();
@@ -20,7 +21,6 @@ class AuthProvider extends ChangeNotifier {
   login(String email, String password) {
     final data = {'correo': email, 'password': password};
     CafeApi.httpPost('/auth/login', data).then((json) {
-      print(json);
       final authResponse = AuthResponse.fromMap(json);
       user = authResponse.usuario;
       authStatus = AuthStatus.authenticated;
@@ -37,7 +37,6 @@ class AuthProvider extends ChangeNotifier {
   register(String name, String email, String password) {
     final data = {'nombre': name, 'correo': email, 'password': password};
     CafeApi.httpPost('/usuarios', data).then((json) {
-      print(json);
       final authResponse = AuthResponse.fromMap(json);
       user = authResponse.usuario;
       authStatus = AuthStatus.authenticated;

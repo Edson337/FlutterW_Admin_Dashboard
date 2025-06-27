@@ -47,7 +47,12 @@ class Sidebar extends StatelessWidget {
           ),
           MenuItem(text: 'Products', icon: Icons.dashboard_outlined, onPressed: () {}),
           MenuItem(text: 'Discount', icon: Icons.attach_money_outlined, onPressed: () {}),
-          MenuItem(text: 'Customers', icon: Icons.people_alt_outlined, onPressed: () {}),
+          MenuItem(
+            isActive: sideMenuProvider.currentPage == Flurorouter.usersRoute,
+            text: 'Users', 
+            icon: Icons.people_alt_outlined, 
+            onPressed: () => navigateTo(Flurorouter.usersRoute)
+          ),
           const SizedBox(height: 30),
           const TextSeparator(text: 'UI Elements'),
           MenuItem(

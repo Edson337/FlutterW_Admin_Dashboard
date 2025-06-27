@@ -6,6 +6,8 @@ import 'router/router.dart';
 import 'providers/auth_provider.dart';
 import 'providers/categories_provider.dart';
 import 'providers/sidemenu_provider.dart';
+import 'providers/users_provider.dart';
+import 'providers/user_form_provider.dart';
 import 'services/local_storage.dart';
 import 'services/navigation_service.dart';
 import 'services/notifications_service.dart';
@@ -29,7 +31,9 @@ class AppState extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(lazy: false, create: (_) => AuthProvider()),
         ChangeNotifierProvider(lazy: false, create: (_) => SideMenuProvider()),
-        ChangeNotifierProvider(create: (_) => CategoriesProvider())
+        ChangeNotifierProvider(create: (_) => CategoriesProvider()),
+        ChangeNotifierProvider(create: (_) => UsersProvider()),
+        ChangeNotifierProvider(create: (_) => UserFormProvider())
       ],
       child: const MyApp(),
     );

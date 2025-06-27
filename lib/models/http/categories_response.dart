@@ -22,6 +22,6 @@ class CategoriesResponse {
 
     Map<String, dynamic> toMap() => {
         "total": total,
-        "categorias": List<dynamic>.from(categorias.map((x) => x.toJson())),
+        "categorias": List<dynamic>.from(categorias.map((x) => x.toMap())),
     };
 }
