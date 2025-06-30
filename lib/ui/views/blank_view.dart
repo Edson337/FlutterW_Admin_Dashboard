@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../cards/white_card.dart';
-import '../labels/custom_labels.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 class BlankView extends StatelessWidget {
   const BlankView({super.key});

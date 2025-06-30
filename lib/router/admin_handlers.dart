@@ -1,10 +1,8 @@
 import 'package:fluro/fluro.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/auth_provider.dart';
-import '../ui/views/login_view.dart';
-import '../ui/views/register_view.dart';
-import '../ui/views/dashboard_view.dart';
+import 'package:admin_dashboard/providers/providers.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 class AdminHandlers {
   static Handler login = Handler(handlerFunc: (context, params) {

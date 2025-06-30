@@ -1,8 +1,6 @@
 import 'package:fluro/fluro.dart';
 
-import 'admin_handlers.dart';
-import 'dashboard_handlers.dart';
-import 'no_page_found_handlers.dart';
+import 'package:admin_dashboard/router/routes.dart';
 
 class Flurorouter {
   static final FluroRouter router = FluroRouter();

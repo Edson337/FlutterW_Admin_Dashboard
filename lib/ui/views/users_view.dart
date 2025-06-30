@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../datatables/users_datasource.dart';
-import '../../providers/users_provider.dart';
-import '../labels/custom_labels.dart';
+import 'package:admin_dashboard/datatables/datasources.dart';
+import 'package:admin_dashboard/providers/providers.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 class UsersView extends StatelessWidget {
   const UsersView({super.key});

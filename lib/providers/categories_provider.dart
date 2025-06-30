@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../api/CafeApi.dart';
-import '../models/category.dart';
-import '../models/http/categories_response.dart';
+import 'package:admin_dashboard/api/CafeApi.dart';
+import 'package:admin_dashboard/models/models.dart';
 
 class CategoriesProvider extends ChangeNotifier {
   List<Category> categorias = [];

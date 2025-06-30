@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../providers/sidemenu_provider.dart';
-import 'widgets/navbar_avatar.dart';
-import 'widgets/notifications_indicator.dart';
-import 'widgets/search_text.dart';
+import 'package:admin_dashboard/providers/providers.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});

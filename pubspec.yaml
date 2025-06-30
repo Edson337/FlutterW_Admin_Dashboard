@@ -8,9 +8,12 @@ environment:
   sdk: ^3.5.1
 
 dependencies:
+  flutter_web_plugins:
+    sdk: flutter
   cupertino_icons: ^1.0.8
   dio: ^5.7.0
   email_validator: ^3.0.0
+  file_picker: ^10.2.0
   fluro: ^2.0.5
   flutter:
     sdk: flutter

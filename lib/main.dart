@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
-import 'api/CafeApi.dart';
-import 'router/router.dart';
-import 'providers/auth_provider.dart';
-import 'providers/categories_provider.dart';
-import 'providers/sidemenu_provider.dart';
-import 'providers/users_provider.dart';
-import 'providers/user_form_provider.dart';
-import 'services/local_storage.dart';
-import 'services/navigation_service.dart';
-import 'services/notifications_service.dart';
-import 'ui/layouts/auth/auth_layout.dart';
-import 'ui/layouts/dashboard/dashboard_layout.dart';
-import 'ui/layouts/splash/splash_layout.dart';
+import 'package:admin_dashboard/api/CafeApi.dart';
+import 'package:admin_dashboard/providers/providers.dart';
+import 'package:admin_dashboard/router/router.dart';
+import 'package:admin_dashboard/services/services.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 void main() async {
+  setUrlStrategy(PathUrlStrategy());
   await LocalStorage.configurePrefs();
   CafeApi.configureDio();
   Flurorouter.configureRoutes();

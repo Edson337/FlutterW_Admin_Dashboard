@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/background_twitter.dart';
-import 'widgets/custom_title.dart';
-import 'widgets/links_bar.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 class AuthLayout extends StatelessWidget {
   final Widget child;

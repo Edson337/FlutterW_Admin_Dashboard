@@ -1,6 +1,7 @@
+import 'dart:typed_data';
 import 'package:dio/dio.dart';
 
-import '../services/local_storage.dart';
+import 'package:admin_dashboard/services/services.dart';
 
 class CafeApi {
   static final Dio _dio = Dio();
@@ -48,6 +49,18 @@ class CafeApi {
       return response.data;
     } on DioException catch (err) {
       throw ('Error en el DELETE: ${err.response}');
+    }
+  }
+
+  static Future httpUploadFile(String path, Uint8List bytes) async {
+    final formData = FormData.fromMap({
+      'archivo': MultipartFile.fromBytes(bytes)
+    });
+    try {
+      final response = await _dio.put(path, data: formData);
+      return response.data;
+    } on DioException catch (err) {
+      throw ('Error en el PUTUploadImage: ${err.response}');
     }
   }
 }

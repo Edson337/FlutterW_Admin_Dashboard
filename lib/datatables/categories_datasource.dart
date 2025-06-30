@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../models/category.dart';
-import '../providers/categories_provider.dart';
-import '../ui/modals/category_modal.dart';
+import 'package:admin_dashboard/models/models.dart';
+import 'package:admin_dashboard/providers/providers.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 class CategoriesDTS extends DataTableSource {
   final List<Category> categorias;

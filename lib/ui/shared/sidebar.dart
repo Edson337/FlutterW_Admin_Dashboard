@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../router/router.dart';
-import '../../providers/auth_provider.dart';
-import '../../providers/sidemenu_provider.dart';
-import '../../services/navigation_service.dart';
-import 'widgets/logo.dart';
-import 'widgets/menu_item.dart';
-import 'widgets/text_separator.dart';
+import 'package:admin_dashboard/router/router.dart';
+import 'package:admin_dashboard/providers/providers.dart';
+import 'package:admin_dashboard/services/services.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 class Sidebar extends StatelessWidget {
   const Sidebar({super.key});

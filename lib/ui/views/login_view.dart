@@ -2,21 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:email_validator/email_validator.dart';
 
-import '../../providers/auth_provider.dart';
-import '../../providers/login_form_provider.dart';
-import '../../router/router.dart';
-import '../buttons/custom_outlined_btn.dart';
-import '../buttons/link_text.dart';
-import '../inputs/custom_inputs.dart';
-
-class PasswordVisibilityProvider with ChangeNotifier {
-  bool _isObscure = true;
-  bool get isObscure => _isObscure;
-  void toggleVisibility() {
-    _isObscure = !_isObscure;
-    notifyListeners();
-  }
-}
+import 'package:admin_dashboard/providers/providers.dart';
+import 'package:admin_dashboard/router/router.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});

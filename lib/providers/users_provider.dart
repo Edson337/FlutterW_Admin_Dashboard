@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../api/CafeApi.dart';
-import '../models/http/user.dart';
-import '../models/http/users_response.dart';
+import 'package:admin_dashboard/api/CafeApi.dart';
+import 'package:admin_dashboard/models/models.dart';
 
 class UsersProvider extends ChangeNotifier {
   List<User> users = [];

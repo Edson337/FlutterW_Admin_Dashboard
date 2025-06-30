@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../buttons/custom_icon_btn.dart';
-import '../labels/custom_labels.dart';
-import '../../datatables/categories_datasource.dart';
-import '../../providers/categories_provider.dart';
-import '../modals/category_modal.dart';
+import 'package:admin_dashboard/datatables/datasources.dart';
+import 'package:admin_dashboard/providers/providers.dart';
+import 'package:admin_dashboard/ui/ui.dart';
 
 class CategoriesView extends StatefulWidget {
   const CategoriesView({super.key});

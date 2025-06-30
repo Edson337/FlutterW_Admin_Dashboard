@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import '../category.dart';
+import 'package:admin_dashboard/models/models.dart';
 
 class CategoriesResponse {
     int total;

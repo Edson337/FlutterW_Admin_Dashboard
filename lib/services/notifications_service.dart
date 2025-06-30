@@ -18,4 +18,18 @@ class NotificationsService {
     );
     messengerKey.currentState!.showSnackBar(snackBar);
   }
+
+  static showBusyIndicator(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      barrierColor: Colors.black.withOpacity(0.3),
+      builder: (_) => const Center(
+        child: CircularProgressIndicator(
+          color: Colors.indigo,
+          strokeWidth: 3.0,
+        ),
+      ),
+    );
+  }
 }
