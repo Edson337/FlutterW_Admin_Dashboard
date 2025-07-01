@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; // Importa las herramientas de Flutter para trabajar con widgets visuales
 
-class CustomInputs {
-  static InputDecoration loginInputDecoration({required String hint, required String label, required IconData icon}) {
+class CustomInputs { // Clase utilitaria para centralizar decoraciones de campos de texto (InputDecoration)
+  static InputDecoration loginInputDecoration({required String hint, required String label, required IconData icon}) { // Estilo de input específico para los campos del formulario de Login
     return InputDecoration(
       border: const OutlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
       enabledBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
@@ -13,7 +13,7 @@ class CustomInputs {
     );
   }
 
-  static InputDecoration searchInputDecoration({required String hint, required IconData icon}) {
+  static InputDecoration searchInputDecoration({required String hint, required IconData icon}) { // Estilo de input para campos tipo Search (buscador)
     return InputDecoration(
       border: InputBorder.none,
       enabledBorder: InputBorder.none,
@@ -24,7 +24,7 @@ class CustomInputs {
     );
   }
 
-  static InputDecoration passwordInputDecoration({required String hint, required String label, required bool isObscure, required VoidCallback toggleVisibility}) {
+  static InputDecoration passwordInputDecoration({required String hint, required String label, required bool isObscure, required VoidCallback toggleVisibility}) { // Estilo de input para campos de tipo Password, con visibilidad controlada
     return InputDecoration(
       border: const OutlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
       enabledBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.white54)),
@@ -40,7 +40,7 @@ class CustomInputs {
     );
   }
 
-  static InputDecoration formInputDecoration({required String hint, required String label, required IconData icon}) {
+  static InputDecoration formInputDecoration({required String hint, required String label, required IconData icon}) { // Estilo de input genérico para formularios del Dashboard
     return InputDecoration(
       border: OutlineInputBorder(borderSide: BorderSide(color: Colors.indigo.withOpacity(0.3))),
       enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.indigo.withOpacity(0.3))),

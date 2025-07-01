@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:admin_dashboard/ui/ui.dart';
 
-class BlankView extends StatelessWidget {
+class BlankView extends StatelessWidget { // Vista Blank (página vacía de ejemplo)
   const BlankView({super.key});
 
   @override

@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; // Importa el paquete de Flutter para manejar widgets y formularios
 
-class LoginFormProvider extends ChangeNotifier {
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
-  String email = '';
+class LoginFormProvider extends ChangeNotifier { // Provider que maneja el estado del formulario de login
+  GlobalKey<FormState> formKey = GlobalKey<FormState>(); // Clave global que permite identificar el estado del formulario en la UI
+  String email = ''; // Variables para almacenar los valores del formulario (email y contraseña)
   String password = '';
 
-  bool validateForm() {
-    if (formKey.currentState!.validate()) {
-      return true;
+  bool validateForm() { // Método para validar el formulario
+    if (formKey.currentState!.validate()) { // Llama al método validate del formulario actual
+      return true; // Si todas las validaciones de los campos pasan, devuelve true
     } else {
-      return false;
+      return false; // Si alguna validación falla, devuelve false
     }
   }
 }
